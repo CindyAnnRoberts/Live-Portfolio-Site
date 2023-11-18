@@ -127,19 +127,25 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* *********CSS Reset End *********/
-/* ************************************ */
+/* CSS Reset End */
 
-/* font-family: 'Mukta', sans-serif; */
+/* Define Color Variables */
+:root {
+  --primary-color: lab(28% -14 -14);
+  --accent-color: #3498db;
+  /* Define other colors as needed */
+}
 
+/* Global Styles */
 body {
   font-family: "Mukta", sans-serif;
 }
+
+/* Header Styles */
 header {
   position: relative;
   height: 60px;
-  background-color: lab(28% -14 -14);
-
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
 }
@@ -149,15 +155,15 @@ header {
   margin-left: 20px;
   vertical-align: middle;
 }
-
-#navContainer {
-  display: none;
-}
 #hamburger {
   position: absolute;
   top: 23px;
   right: 20px;
   fill: #fff;
+}
+
+#navContainer {
+  display: none;
 }
 
 input[type="checkbox"] {
@@ -194,6 +200,7 @@ nav li {
   border-bottom: 1px solid #ededed;
 }
 
+/* Heading Styles */
 h1 {
   font-size: 1.6rem;
   margin-top: 20px;
@@ -205,12 +212,31 @@ h1 {
 h1 span {
   font-weight: 700;
 }
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
 
+/* Article Image Styles */
+article img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+/* Article Paragraph Styles */
+article p {
+  margin: 10px 20px;
+}
+
+/* Footer Styles */
 footer {
-  height: 120px;
-  background-color: lab(28% -14 -14);
+  background-color: var(--primary-color);
   text-align: center;
 }
+
+/* Social Links Styles */
 .social {
   width: 200px;
   margin: 0 auto;
@@ -226,12 +252,62 @@ footer {
 .social_link svg {
   fill: #fff;
 }
+
+/* Small Text Styles */
 small {
   color: #fff;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
 
+/* Form Section Styles */
+#contact {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact-form {
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width as needed */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Style form inputs */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add hover effect to the submit button */
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Media Query Styles */
 /* smaller that 540px do the following */
 @media screen and (min-width: 540px) {
   header {
