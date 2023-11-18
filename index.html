@@ -29,34 +29,117 @@
             }
         </script>
 
-        <header>
-
-            <div>
-                <a href="index.html"><img id="whiteLogo" src="image/SVG/LogoRoberts.svg" alt=""></a>
-                <div id="hamburger">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
-                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-                    </svg>
+        <main>
+            <header>
+                <div>
+                    <a href="index.html"><img id="whiteLogo" src="image/SVG/LogoRoberts.svg" alt=""></a>
+                    <div id="hamburger">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </div>
+                    <input type="checkbox" id="myCheck" onclick="myFunction()">
+                    <nav id="navContainer">
+                        <ul>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <input type="checkbox" id="myCheck" onclick="myFunction()">
-                <nav id="navContainer">
-                    <ul>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+            </header>
 
-        </header>
+            <section>
+                <h1><span>Hi, I&apos;m Cindy-Ann Roberts.</span><br>
+                    I Love Crafting Empathic UX-Driven Front End Solutions</h1>
+            </section>
+
+            <section id="portfolio">
+                <h2>Portfolio</h2>
+                <!-- Your portfolio items go here -->
+
+                <article>
+                    <h3>Diabetes Education</h3>
+                    <!-- Project details, images, and description go here -->
+                    <figure>
+                        <img src="project-image.jpg" alt="Project Image">
+                        <figcaption>Caption describing the project</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <h3>Luna Fairy</h3>
+                    <!-- Project details, images, and description go here -->
+                    <figure>
+                        <img src="project-image.jpg" alt="Project Image">
+                        <figcaption>Caption describing the project</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <h3>Easy bank</h3>
+                    <!-- Project details, images, and description go here -->
+                    <figure>
+                        <img src="project-image.jpg" alt="Project Image">
+                        <figcaption>Caption describing the project</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <h3>Venus Group</h3>
+                    <!-- Project details, images, and description go here -->
+                    <figure>
+                        <img src="project-image.jpg" alt="Project Image">
+                        <figcaption>Caption describing the project</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <h3>Greenleaf Post Card</h3>
+                    <!-- Project details, images, and description go here -->
+                    <figure>
+                        <img src="project-image.jpg" alt="Project Image">
+                        <figcaption>Caption describing the project</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <h3>Pure Protein Case Study</h3>
+                    <!-- Project details, images, and description go here -->
+                    <figure>
+                        <img src="project-image.jpg" alt="Project Image">
+                        <figcaption>Caption describing the project</figcaption>
+                    </figure>
+                </article>
 
 
-        <section>
-            <h1><span>Hi, I’m Cindy-Ann Roberts.</span><br>
-                I Love Crafting Empathic UX-Driven Front End Solutions</h1>
-        </section>
+
+            </section>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <!-- Your about me content goes here -->
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <!-- Your contact form or information goes here -->
+                <form action="/submit" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <!-- Other form fields go here -->
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+        </main>
 
 
 
@@ -93,7 +176,7 @@
                 </a>
             </div>
 
-            <small>&copy;2023 Cindy-Ann Roberts</small>
+            <small>&copy; 2023 Cindy-Ann Roberts. All Rights Reserved.</small>
 
         </footer>
 
