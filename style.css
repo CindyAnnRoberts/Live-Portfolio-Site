@@ -132,13 +132,15 @@ table {
 /* Define Color Variables */
 :root {
   --primary-color: lab(28% -14 -14);
-  --accent-color: #3498db;
+  --gray-color: lab(94% -0 0);
+  --accent-color: lab(70% 5 30);
   /* Define other colors as needed */
 }
 
 /* Global Styles */
 body {
   font-family: "Mukta", sans-serif;
+  color: #000;
 }
 
 /* Header Styles */
@@ -197,43 +199,92 @@ nav li a {
 
 nav li {
   text-align: center;
-  border-bottom: 1px solid #ededed;
 }
 
 /* Heading Styles */
 h1 {
   font-size: 1.6rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 110px 0;
   text-align: center;
   padding: 0 15px;
   line-height: 33px;
 }
-h1 span {
+
+h2 {
+  font-size: 1.3rem;
+  margin: 20px 0 15px;
   font-weight: 700;
 }
-h2 {
-  font-size: 1.5rem;
+span {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 2.3rem;
 }
+
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
-/* Article Image Styles */
-article img {
-  max-width: 100%;
+p {
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+figcaption {
+  margin: 10px 0;
+  line-height: 25px;
+}
+
+#about,
+#portfolio {
+  margin: 0 20px;
+}
+#portfolio {
+  margin-bottom: 40px;
+}
+#profileImg img {
+  height: 200px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
   display: block;
-  margin: 0 auto;
+  margin: 10px 0;
 }
-/* Article Paragraph Styles */
-article p {
-  margin: 10px 20px;
+#portfolio article {
+  border-bottom: 1px solid #f4f4f4;
+  padding-bottom: 20px;
 }
-
+#portfolio article:last-child {
+  border-bottom: transparent;
+}
+#portfolio h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+#portfolio h3 {
+  font-weight: 700;
+  margin: 50px 0 20px;
+  font-size: 1.3rem;
+}
+.colorLinks {
+  color: var(--primary-color);
+}
+/* About Paragraph Styles */
+#about h1 {
+  text-align: left;
+  font-weight: 700;
+  margin: 10px 0;
+  padding: 0;
+}
+/* Contact Paragraph Styles */
+#contact {
+  margin: 0 20px;
+}
 /* Footer Styles */
 footer {
   background-color: var(--primary-color);
   text-align: center;
+  padding-bottom: 20px;
+  margin-top: auto;
 }
 
 /* Social Links Styles */
@@ -246,8 +297,8 @@ footer {
 .social_link {
   text-decoration: none;
   font-size: 1.2rem;
-  margin-top: 32px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 .social_link svg {
   fill: #fff;
@@ -257,23 +308,21 @@ footer {
 small {
   color: #fff;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 /* Form Section Styles */
 #contact {
-  background-color: #f4f4f4;
-  padding: 20px;
+  /* background-color: #f4f4f4; */
+  padding: 20px 0;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .intro {
-  text-align: center;
   margin-bottom: 20px;
 }
+
 .contact-form {
   width: 100%;
   max-width: 400px; /* Adjust the max-width as needed */
@@ -294,29 +343,92 @@ input {
 
 /* Style the submit button */
 button {
-  background-color: #3498db;
+  background-color: #000;
   color: #fff;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-bottom: 40px;
 }
 
 /* Add hover effect to the submit button */
 button:hover {
-  background-color: #2980b9;
+  background-color: #808080;
+}
+/* Diabetes Education Styles */
+#diabetesPage {
+  margin: 10px 20px 0;
+}
+#diabetesPage h1 {
+  text-align: left;
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 20px 0;
+}
+#diabetesMockups img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Luna Fairy Styles */
+#lunaFairy {
+  margin: 0 20px;
+}
+#lunaFairy h1 {
+  padding-left: 0;
+  text-align: left;
+  font-weight: 700;
+  margin: 20px 0;
+  line-height: 25px;
+}
+#lunaFairy h2 {
+  font-size: 1.1rem;
+}
+article img {
+  max-width: 100%;
+  display: block;
+}
+
+#lunaFairy,
+#easyBank,
+#nikeAd {
+  margin-bottom: 20px;
+}
+/* Nike Ad Styles */
+#nikeCaseStudy {
+  margin: 10px 20px 0;
+}
+
+#nikeCaseStudy h1 {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 25px;
+}
+#nikeCaseStudy header {
+  background-color: transparent;
+}
+#nikeCaseStudy h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+#imagesCombined img {
+  margin-bottom: 10px;
 }
 
 /* Media Query Styles */
-/* smaller that 540px do the following */
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 480px) {
   header {
     display: flex;
     align-items: center;
   }
   header div {
     width: 90vw;
-    border: 1px solid orange;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -325,7 +437,6 @@ button:hover {
   #whiteLogo {
     margin-top: 0;
     margin-left: 0;
-    border: 1px solid blue;
   }
 
   #hamburger {
@@ -345,7 +456,6 @@ button:hover {
     display: flex;
     justify-content: space-between;
     background-color: transparent;
-    border: 1px solid lime;
     width: 250px;
   }
   nav li {
@@ -355,5 +465,76 @@ button:hover {
     color: #fff;
     border-bottom: none;
     padding: 0;
+  }
+  h1 {
+    font-size: 2.8rem;
+    margin: 210px 0;
+    line-height: 60px;
+  }
+  #portfolio {
+    margin: 0 auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(5, auto);
+    gap: 30px;
+  }
+
+  #portfolio img {
+    max-width: 100%;
+    display: block;
+  }
+
+  #about {
+    margin: 0 auto;
+    width: 90vw;
+  }
+  /* Nike Case Study Styles */
+
+  #nikeCaseStudy h2 {
+    margin-top: 20px;
+  }
+  #imagesCombined {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+  span {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 3.3rem;
+  }
+  #portfolio article {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  #portfolio h2 {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+  #portfolio h3 {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  #fairyBook {
+    grid-column: 1/2;
+    grid-row: 3/5;
+  }
+  #diabetes {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    padding-bottom: 0;
+  }
+  #easyBank {
+    grid-column: 1/-1;
+    grid-row: 5/-1;
+  }
+  #nikeAd {
+    grid-column: 2/-1;
+    grid-row: 3/4;
+  }
+  #printDesign {
+    grid-column: 2/-1;
+    grid-row: 4/5;
   }
 }
