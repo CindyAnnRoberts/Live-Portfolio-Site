@@ -141,8 +141,15 @@ table {
 body {
   font-family: "Mukta", sans-serif;
   color: #000;
-}
 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* This ensures the body takes at least the full height of the viewport */
+  margin: 0;
+}
+main {
+  flex: 1;
+}
 /* Header Styles */
 header {
   position: relative;
@@ -203,26 +210,26 @@ nav li {
 
 /* Heading Styles */
 h1 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin: 110px 0;
   text-align: center;
   padding: 0 15px;
-  line-height: 33px;
-}
-
-h2 {
-  font-size: 1.3rem;
-  margin: 20px 0 15px;
-  font-weight: 700;
+  line-height: 26px;
 }
 span {
   font-weight: 700;
   color: var(--primary-color);
-  font-size: 2.3rem;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 20px 0 15px;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 p {
@@ -257,13 +264,13 @@ figcaption {
   border-bottom: transparent;
 }
 #portfolio h2 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
 }
 #portfolio h3 {
   font-weight: 700;
-  margin: 50px 0 20px;
-  font-size: 1.3rem;
+  margin: 30px 0 20px;
+  font-size: 1rem;
 }
 .colorLinks {
   color: var(--primary-color);
@@ -403,7 +410,7 @@ article img {
 }
 
 #nikeCaseStudy h1 {
-  padding: 0;
+  padding: 20px 0 0;
   margin: 0;
   text-align: left;
   font-weight: 700;
@@ -422,7 +429,7 @@ article img {
 }
 
 /* Media Query Styles */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
   header {
     display: flex;
     align-items: center;
@@ -467,17 +474,22 @@ article img {
     padding: 0;
   }
   h1 {
-    font-size: 2.8rem;
+    font-size: 1.5rem;
     margin: 210px 0;
-    line-height: 60px;
+    line-height: 30px;
+  }
+  span {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.7rem;
   }
   #portfolio {
     margin: 0 auto;
-    width: 70vw;
+    width: 90vw;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(5, auto);
-    gap: 30px;
+    gap: 10px;
   }
 
   #portfolio img {
@@ -499,11 +511,7 @@ article img {
     grid-template-columns: auto auto;
     gap: 20px;
   }
-  span {
-    font-weight: 700;
-    color: var(--primary-color);
-    font-size: 3.3rem;
-  }
+
   #portfolio article {
     padding-bottom: 0;
     border-bottom: 0;
@@ -536,5 +544,52 @@ article img {
   #printDesign {
     grid-column: 2/-1;
     grid-row: 4/5;
+  }
+  header div,
+  #introduction,
+  #contact,
+  #about {
+    margin: 0 auto;
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #introduction,
+  header div,
+  #portfolio,
+  #diabetesPage,
+  #lunaFairy,
+  #nikeCaseStudy,
+  #contact,
+  #about {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 800px) {
+  #introduction,
+  header div,
+  #portfolio,
+  #diabetesPage,
+  #lunaFairy,
+  #nikeCaseStudy,
+  #contact,
+  #about {
+    width: 75vw;
+    margin: 0 auto;
+  }
+  #introduction h1 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  span {
+    font-size: 2.5rem;
+  }
+  #portfolio h2 {
+    font-size: 1.5rem;
+  }
+  #portfolio h3 {
+    font-size: 1.2rem;
   }
 }
