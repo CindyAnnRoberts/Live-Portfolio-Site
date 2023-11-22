@@ -197,11 +197,11 @@ nav ul {
 nav li a {
   display: block;
   text-decoration: none;
-  padding: 16px;
+  padding: 20px;
   border-bottom: 1px solid #ededed;
   color: lab(28% -14 -14);
   font-weight: 300;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 nav li {
@@ -363,10 +363,25 @@ button {
 button:hover {
   background-color: #808080;
 }
+/* Green Leaf Cafe Styles */
+#greenLeaf {
+  margin: 0 20px;
+}
+#greenLeaf strong {
+  font-weight: 700;
+}
+#greenLeaf li {
+  list-style: disc;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  line-height: 25px;
+}
+
 /* Diabetes Education Styles */
 #diabetesPage {
   margin: 10px 20px 0;
 }
+#greenLeaf h1,
 #diabetesPage h1 {
   text-align: left;
   font-weight: 700;
@@ -562,7 +577,8 @@ article img {
   #lunaFairy,
   #nikeCaseStudy,
   #contact,
-  #about {
+  #about,
+  #greenLeaf {
     width: 80vw;
     margin: 0 auto;
   }
@@ -575,7 +591,8 @@ article img {
   #lunaFairy,
   #nikeCaseStudy,
   #contact,
-  #about {
+  #about,
+  #greenLeaf {
     width: 75vw;
     margin: 0 auto;
   }
