@@ -165,6 +165,7 @@ header div {
   width: 10rem;
   margin-left: 20px;
   vertical-align: middle;
+  cursor: pointer;
 }
 #hamburger {
   position: absolute;
@@ -240,7 +241,7 @@ p {
 }
 
 figcaption {
-  margin: 10px 0;
+  margin: 20px 0;
   line-height: 25px;
 }
 article img {
@@ -257,13 +258,13 @@ article img {
 #profileImg img {
   height: 200px;
   border: 1px solid #d3d3d3;
-  border-radius: 4px;
+  border-radius: 50%;
   display: block;
   margin: 10px 0;
 }
 #portfolio article {
   border-bottom: 1px solid #f4f4f4;
-  /* padding-bottom: 20px; */
+  padding-bottom: 40px;
 }
 #portfolio article:last-child {
   border-bottom: transparent;
@@ -280,17 +281,20 @@ article img {
 .colorLinks {
   color: var(--primary-color);
 }
-/* About Paragraph Styles */
+
+#contact h1,
 #about h1 {
   text-align: left;
   font-weight: 700;
   margin: 10px 0;
   padding: 0;
 }
+
 /* Contact Paragraph Styles */
 #contact {
   margin: 0 20px;
 }
+
 /* Footer Styles */
 footer {
   background-color: var(--primary-color);
@@ -390,7 +394,6 @@ button:hover {
   line-height: 25px;
 }
 
-/* Diabetes Education Styles */
 #diabetesPage {
   margin: 10px 20px 0;
   max-width: 1000px;
@@ -400,6 +403,7 @@ button:hover {
   flex-direction: column;
   gap: 20px;
 }
+
 #greenLeaf h1,
 #travelPage h1,
 #diabetesPage h1 {
@@ -539,8 +543,12 @@ article img {
   }
 
   #portfolio article {
-    padding-bottom: 0;
-    border-bottom: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px 40px 20px;
+    margin-bottom: 20px;
+  }
+  #portfolio h3 {
+    margin-top: 10px;
   }
 
   header div,
@@ -571,14 +579,59 @@ article img {
   }
 
   #diabetesMockups div {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(5, auto);
+    gap: 40px;
+
+    margin: 0 auto;
   }
+
   #diabetesMockups img {
-    width: 40%;
-    height: auto;
+    height: 100%;
+    width: auto;
     object-fit: cover;
+    margin: 0;
+  }
+  #diabetesMockups img:first-child {
+    border: 1px solid hotpink;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #diabetesMockups img:nth-child(2) {
+    border: 1px solid lime;
+    grid-column: 2/-1;
+    grid-row: 1/2;
+  }
+  #diabetesMockups img:nth-child(3) {
+    border: 1px solid blue;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-width: 100%;
+    height: auto;
+  }
+  #diabetesMockups img:nth-child(4) {
+    border: 1px solid orange;
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+    max-width: 100%;
+    height: auto;
+  }
+  #diabetesMockups img:nth-child(5) {
+    border: 1px solid gray;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+  }
+  #diabetesMockups img:nth-child(6) {
+    border: 1px solid lightseagreen;
+    grid-column: 1/2;
+    grid-row: 4/-1;
+    max-width: 100%;
+    height: auto;
+    align-self: end;
   }
   #designProcess div {
     max-width: 75%;
@@ -592,8 +645,12 @@ article img {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(6, auto);
-    gap: 30px;
+    column-gap: 40px;
   }
+  #portfolio article {
+    margin: 0 0 40px;
+  }
+
   #portfolio h2 {
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -653,10 +710,7 @@ article img {
   #portfolio h3 {
     font-size: 1.2rem;
   }
-  #portfolio article {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 30px;
-  }
+
   #portfolio article h3 {
     padding: 0 0 20px;
   }
