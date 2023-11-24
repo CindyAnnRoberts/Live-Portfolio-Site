@@ -158,7 +158,9 @@ header {
   display: flex;
   align-items: center;
 }
-
+header div {
+  max-width: 1000px;
+}
 #whiteLogo {
   width: 10rem;
   margin-left: 20px;
@@ -247,6 +249,7 @@ article img {
 #about,
 #portfolio {
   margin: 0 20px;
+  max-width: 1000px;
 }
 #portfolio {
   margin-bottom: 40px;
@@ -327,6 +330,7 @@ small {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
 }
 .intro {
   margin-bottom: 20px;
@@ -365,9 +369,13 @@ button {
 button:hover {
   background-color: #808080;
 }
-/* Green Leaf Cafe Styles */
+
+#nikeCaseStudy,
+#lunaFairy,
+#travelPage,
 #greenLeaf {
   margin: 0 20px;
+  max-width: 1000px;
 }
 
 #diabetesPage strong,
@@ -381,13 +389,11 @@ button:hover {
   padding-bottom: 10px;
   line-height: 25px;
 }
-#travelPage {
-  margin: 0 20px;
-}
 
 /* Diabetes Education Styles */
 #diabetesPage {
   margin: 10px 20px 0;
+  max-width: 1000px;
 }
 #designProcess div {
   display: flex;
@@ -410,9 +416,7 @@ button:hover {
 }
 
 /* Luna Fairy Styles */
-#lunaFairy {
-  margin: 0 20px;
-}
+
 #lunaFairy h1 {
   padding-left: 0;
   text-align: left;
@@ -434,9 +438,6 @@ article img {
   margin-bottom: 20px;
 }
 /* Nike Ad Styles */
-#nikeCaseStudy {
-  margin: 10px 20px 0;
-}
 
 #nikeCaseStudy h1 {
   padding: 20px 0 0;
@@ -452,6 +453,11 @@ article img {
 #nikeCaseStudy h2 {
   font-size: 1.1rem;
   margin-bottom: 10px;
+}
+#nikeImageContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 #designProcess div {
   margin-top: 20px;
@@ -560,6 +566,10 @@ article img {
     width: 80vw;
     margin: 0 auto;
   }
+  #travel {
+    margin-bottom: 40px;
+  }
+
   #diabetesMockups div {
     display: flex;
     gap: 20px;
@@ -575,10 +585,10 @@ article img {
     margin: 30px auto;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 980px) {
   #portfolio {
     margin: 0 auto;
-    width: 90vw;
+    max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(6, auto);
@@ -643,7 +653,10 @@ article img {
   #portfolio h3 {
     font-size: 1.2rem;
   }
-
+  #portfolio article {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+  }
   #portfolio article h3 {
     padding: 0 0 20px;
   }
