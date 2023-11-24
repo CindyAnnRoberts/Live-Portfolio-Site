@@ -370,9 +370,11 @@ button:hover {
   margin: 0 20px;
 }
 
+#diabetesPage strong,
 #greenLeaf strong {
   font-weight: 700;
 }
+#diabetesPage li,
 #greenLeaf li {
   list-style: disc;
   margin-left: 20px;
@@ -386,6 +388,11 @@ button:hover {
 /* Diabetes Education Styles */
 #diabetesPage {
   margin: 10px 20px 0;
+}
+#designProcess div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 #greenLeaf h1,
 #travelPage h1,
@@ -445,6 +452,10 @@ article img {
 #nikeCaseStudy h2 {
   font-size: 1.1rem;
   margin-bottom: 10px;
+}
+#designProcess div {
+  margin-top: 20px;
+  padding: 10px;
 }
 
 /* Media Query Styles */
@@ -549,14 +560,28 @@ article img {
     width: 80vw;
     margin: 0 auto;
   }
+  #diabetesMockups div {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  #diabetesMockups img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+  }
+  #designProcess div {
+    max-width: 75%;
+    margin: 30px auto;
+  }
 }
 @media screen and (min-width: 1000px) {
   #portfolio {
     margin: 0 auto;
     width: 90vw;
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(6, auto);
     gap: 30px;
   }
   #portfolio h2 {
@@ -568,28 +593,28 @@ article img {
     padding-bottom: 20px;
   }
   #diabetes {
-    grid-column: 1/2;
+    grid-column: 1/-1;
     grid-row: 2/3;
   }
   #easyBank {
-    grid-column: 2/3;
-    grid-row: 2/3;
+    grid-column: 1/-1;
+    grid-row: 6/-1;
   }
   #fairyBook {
-    grid-column: 3/-1;
-    grid-row: 2/3;
+    grid-column: 1/2;
+    grid-row: 3/5;
   }
   #nikeAd {
-    grid-column: 1/2;
-    grid-row: 3/-1;
+    grid-column: 2/-1;
+    grid-row: 3/4;
   }
   #greenleaf {
-    grid-column: 2/3;
-    grid-row: 3/-1;
+    grid-column: 2/-1;
+    grid-row: 4/-1;
   }
   #travel {
-    grid-column: 3/-1;
-    grid-row: 3/-1;
+    grid-column: 1/-1;
+    grid-row: 5/6;
   }
 
   #introduction,
@@ -617,5 +642,24 @@ article img {
   }
   #portfolio h3 {
     font-size: 1.2rem;
+  }
+
+  #portfolio article h3 {
+    padding: 0 0 20px;
+  }
+
+  .imgContainer img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+
+    object-fit: cover;
+  }
+  #fairyBook img {
+    max-height: 800px;
+  }
+  #designProcess div {
+    max-width: 70%;
+    margin: 30px auto;
   }
 }
